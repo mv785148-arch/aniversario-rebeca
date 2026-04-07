@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feliz Aniversário Rebeca 🎉</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{min-height:100vh;background:linear-gradient(160deg,#1a0030 0%,#3d0066 50%,#6a0dad 100%);display:flex;flex-direction:column;align-items:center;padding-bottom:40px;font-family:Arial,sans-serif;color:white;overflow-x:hidden;user-select:none;-webkit-tap-highlight-color:transparent}
+h1{margin-top:32px;font-family:'Pacifico',cursive;font-size:clamp(1.2rem,5vw,2rem);text-align:center;padding:0 16px;line-height:1.4}
+.neon{color:#ff4df0;text-shadow:0 0 8px #ff00ff,0 0 24px #ff00ffaa}
+.candles-area{margin-top:20px;display:flex;gap:28px;align-items:flex-end;position:relative;z-index:5;height:120px}
+.cake-body{width:260px;height:120px;background:linear-gradient(135deg,#f7b6c2,#f090a8);border-radius:0 0 20px 20px;position:relative;box-shadow:0 8px 28px rgba(0,0,0,0.45);cursor:pointer}
+.cake-body::after{content:'';position:absolute;inset:0;border-radius:0 0 20px 20px;background:repeating-linear-gradient(90deg,transparent,transparent 30px,rgba(255,255,255,0.13) 30px,rgba(255,255,255,0.13) 32px)}
+.cake-top{position:absolute;top:-16px;left:-4px;width:calc(100% + 8px);height:22px;background:linear-gradient(to bottom,#ffe0e8,#ffb8cc);border-radius:50% 50% 0 0/80% 80% 0 0;z-index:2}
+.icing{position:absolute;top:-30px;left:-2px;width:calc(100% + 4px);height:36px;background:white;z-index:3;clip-path:polygon(0% 100%,0% 40%,3% 0%,7% 55%,11% 0%,15% 65%,19% 0%,23% 60%,27% 0%,31% 62%,35% 0%,39% 58%,43% 0%,47% 66%,51% 0%,55% 60%,59% 0%,63% 64%,67% 0%,71% 56%,75% 0%,79% 62%,83% 0%,87% 58%,91% 0%,95% 55%,100% 0%,100% 40%,100% 100%)}
+.msg{display:none;margin:28px 20px 0;background:rgba(255,255,255,0.14);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.28);padding:18px 22px;border-radius:16px;text-align:center;font-size:1rem;line-height:1.8;max-width:310px}
+.hint{margin-top:8px;font-size:0.74rem;opacity:0.5}
+.kitty{margin-top:24px;width:88px;height:88px;background:white;border-radius:50%;position:relative}
+.ear{position:absolute;width:33px;height:33px;background:white;border-radius:50%;top:-9px}
+.ear.l{left:2px}.ear.r{right:2px}
+.eye{position:absolute;width:10px;height:13px;background:#111;border-radius:50%;top:34px}
+.eye.l{left:21px}.eye.r{right:21px}
+.nose{position:absolute;width:13px;height:8px;background:#ffcc00;border-radius:50%;top:50px;left:50%;transform:translateX(-50%)}
+@keyframes flameWave{0%{transform:scaleX(1) scaleY(1) rotate(-1.5deg)}25%{transform:scaleX(0.86) scaleY(1.06) rotate(2deg)}50%{transform:scaleX(1.08) scaleY(0.93) rotate(-2.5deg)}75%{transform:scaleX(0.91) scaleY(1.07) rotate(1.5deg)}100%{transform:scaleX(1) scaleY(1) rotate(-1.5deg)}}
+@keyframes innerWave{0%{transform:scaleX(1) scaleY(1);opacity:1}35%{transform:scaleX(1.14) scaleY(0.91);opacity:0.85}70%{transform:scaleX(0.87) scaleY(1.09);opacity:1}100%{transform:scaleX(1) scaleY(1);opacity:1}}
+@keyframes glowBeat{0%,100%{opacity:0.5;transform:scale(1)}50%{opacity:1;transform:scale(1.35)}}
+@keyframes smokeUp1{0%{opacity:0.8;transform:translate(0,0) scale(0.4)}50%{opacity:0.5;transform:translate(3px,-20px) scale(1.1)}100%{opacity:0;transform:translate(-2px,-42px) scale(1.9)}}
+@keyframes smokeUp2{0%{opacity:0.7;transform:translate(0,0) scale(0.4)}50%{opacity:0.4;transform:translate(-4px,-24px) scale(1.2)}100%{opacity:0;transform:translate(3px,-48px) scale(2.1)}}
+@keyframes dance{0%,100%{transform:rotate(0deg)}30%{transform:rotate(9deg)}70%{transform:rotate(-9deg)}}
+@keyframes confettiFall{0%{transform:translateY(-10px) rotate(0deg);opacity:1}100%{transform:translateY(105vh) rotate(700deg);opacity:0}}
+@keyframes burst{0%{transform:scale(1);opacity:1}100%{transform:scale(20);opacity:0}}
+.firework{position:fixed;border-radius:50%;pointer-events:none;animation:burst 1s ease-out forwards}
+.confetti{position:fixed;top:-12px;pointer-events:none;animation:confettiFall linear forwards}
+</style>
+</head>
+<body>
+<h1>🎉 Feliz Aniversário <span class="neon">Rebeca</span> 🎉</h1>
+<div class="candles-area">
+<svg width="30" height="115" viewBox="0 0 30 115" xmlns="http://www.w3.org/2000/svg" overflow="visible">
+<defs>
+<radialGradient id="b1" cx="30%" cy="50%" r="65%"><stop offset="0%" stop-color="#ff8888"/><stop offset="55%" stop-color="#dd1111"/><stop offset="100%" stop-color="#880000"/></radialGradient>
+<radialGradient id="w1" cx="50%" cy="35%" r="60%"><stop offset="0%" stop-color="#ffbbbb"/><stop offset="100%" stop-color="#cc3333"/></radialGradient>
+<radialGradient id="gl1" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#ffdd00" stop-opacity="1"/><stop offset="55%" stop-color="#ff8800" stop-opacity="0.4"/><stop offset="100%" stop-color="#ff4400" stop-opacity="0"/></radialGradient>
+<radialGradient id="fo1" cx="50%" cy="88%" r="56%" gradientUnits="objectBoundingBox"><stop offset="0%" stop-color="#ff2200"/><stop offset="38%" stop-color="#ff8800"/><stop offset="78%" stop-color="#ffdd00"/><stop offset="100%" stop-color="#ffff99" stop-opacity="0.05"/></radialGradient>
+<radialGradient id="fi1" cx="50%" cy="92%" r="50%" gradientUnits="objectBoundingBox"><stop offset="0%" stop-color="white"/><stop offset="20%" stop-color="#fffde0"/><stop offset="65%" stop-color="#ffcc00"/><stop offset="100%" stop-color="#ff8800" stop-opacity="0.2"/></radialGradient>
+<filter id="fb1"><feGaussianBlur stdDeviation="2"/></filter>
+</defs>
+<ellipse id="eg1" cx="15" cy="58" rx="16" ry="13" fill="url(#gl1)" style="transform-origin:15px 58px;animation:glowBeat 1.2s ease-in-out infinite"/>
+<g id="ef1" style="transform-origin:15px 54px;animation:flameWave 0.3s ease-in-out infinite alternate"><path d="M15,54 C7,42 2,30 9,16 C12,9 15,2 15,0 C15,2 18,9 21,16 C28,30 23,42 15,54Z" fill="url(#fo1)" filter="url(#fb1)"/></g>
+<g id="efi1" style="transform-origin:15px 52px;animation:innerWave 0.22s ease-in-out infinite alternate;animation-delay:0.04s"><path d="M15,52 C11,42 8,32 11,21 C12,14 15,7 15,3 C15,7 18,14 19,21 C22,32 19,42 15,52Z" fill="url(#fi1)"/></g>
+<circle id="es1a" cx="15" cy="52" r="5" fill="rgba(180,180,180,0.8)" style="display:none;transform-origin:15px 52px"/>
+<circle id="es1b" cx="15" cy="52" r="4" fill="rgba(180,180,180,0.55)" style="display:none;transform-origin:15px 52px"/>
+<line x1="15" y1="54" x2="15" y2="62" stroke="#2a1a0a" stroke-width="2" stroke-linecap="round"/>
+<ellipse cx="15" cy="65" rx="13" ry="5" fill="url(#w1)"/>
+<path d="M24,66 Q27,73 24,78 Q21,73 24,66Z" fill="#dd5555" opacity="0.65"/>
+<rect x="2" y="65" width="26" height="50" rx="5" fill="url(#b1)"/>
+<rect x="5" y="68" width="6" height="42" rx="3" fill="rgba(255,255,255,0.22)"/>
+<text x="15" y="103" text-anchor="middle" font-size="16" font-weight="bold" font-family="Arial" fill="rgba(255,255,255,0.95)">1</text>
+</svg>
+<svg width="30" height="115" viewBox="0 0 30 115" xmlns="http://www.w3.org/2000/svg" overflow="visible">
+<defs>
+<radialGradient id="b2" cx="30%" cy="50%" r="65%"><stop offset="0%" stop-color="#ff8888"/><stop offset="55%" stop-color="#dd1111"/><stop offset="100%" stop-color="#880000"/></radialGradient>
+<radialGradient id="w2" cx="50%" cy="35%" r="60%"><stop offset="0%" stop-color="#ffbbbb"/><stop offset="100%" stop-color="#cc3333"/></radialGradient>
+<radialGradient id="gl2" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#ffdd00" stop-opacity="1"/><stop offset="55%" stop-color="#ff8800" stop-opacity="0.4"/><stop offset="100%" stop-color="#ff4400" stop-opacity="0"/></radialGradient>
+<radialGradient id="fo2" cx="50%" cy="88%" r="56%" gradientUnits="objectBoundingBox"><stop offset="0%" stop-color="#ff2200"/><stop offset="38%" stop-color="#ff8800"/><stop offset="78%" stop-color="#ffdd00"/><stop offset="100%" stop-color="#ffff99" stop-opacity="0.05"/></radialGradient>
+<radialGradient id="fi2" cx="50%" cy="92%" r="50%" gradientUnits="objectBoundingBox"><stop offset="0%" stop-color="white"/><stop offset="20%" stop-color="#fffde0"/><stop offset="65%" stop-color="#ffcc00"/><stop offset="100%" stop-color="#ff8800" stop-opacity="0.2"/></radialGradient>
+<filter id="fb2"><feGaussianBlur stdDeviation="2"/></filter>
+</defs>
+<ellipse id="eg2" cx="15" cy="58" rx="16" ry="13" fill="url(#gl2)" style="transform-origin:15px 58px;animation:glowBeat 1.2s ease-in-out infinite;animation-delay:0.3s"/>
+<g id="ef2" style="transform-origin:15px 54px;animation:flameWave 0.3s ease-in-out infinite alternate;animation-delay:0.1s"><path d="M15,54 C7,42 2,30 9,16 C12,9 15,2 15,0 C15,2 18,9 21,16 C28,30 23,42 15,54Z" fill="url(#fo2)" filter="url(#fb2)"/></g>
+<g id="efi2" style="transform-origin:15px 52px;animation:innerWave 0.22s ease-in-out infinite alternate;animation-delay:0.08s"><path d="M15,52 C11,42 8,32 11,21 C12,14 15,7 15,3 C15,7 18,14 19,21 C22,32 19,42 15,52Z" fill="url(#fi2)"/></g>
+<circle id="es2a" cx="15" cy="52" r="5" fill="rgba(180,180,180,0.8)" style="display:none;transform-origin:15px 52px"/>
+<circle id="es2b" cx="15" cy="52" r="4" fill="rgba(180,180,180,0.55)" style="display:none;transform-origin:15px 52px"/>
+<line x1="15" y1="54" x2="15" y2="62" stroke="#2a1a0a" stroke-width="2" stroke-linecap="round"/>
+<ellipse cx="15" cy="65" rx="13" ry="5" fill="url(#w2)"/>
+<path d="M6,66 Q3,73 6,78 Q9,73 6,66Z" fill="#dd5555" opacity="0.65"/>
+<rect x="2" y="65" width="26" height="50" rx="5" fill="url(#b2)"/>
+<rect x="5" y="68" width="6" height="42" rx="3" fill="rgba(255,255,255,0.22)"/>
+<text x="15" y="103" text-anchor="middle" font-size="16" font-weight="bold" font-family="Arial" fill="rgba(255,255,255,0.95)">6</text>
+</svg>
+</div>
+<div id="cakeBtn" style="cursor:pointer">
+<div class="cake-body"><div class="cake-top"></div><div class="icing"></div></div>
+</div>
+<p class="hint" id="hint">🎂 toque no bolo!</p>
+<div class="msg" id="msg">✨ Que seu dia seja brilhante e lindo como você ✨<br><br>🎂 Feliz aniversário Bell! 🎉</div>
+<div class="kitty" id="kitty"><div class="ear l"></div><div class="ear r"></div><div class="eye l"></div><div class="eye r"></div><div class="nose"></div></div>
+<script>
+var jaFestejou=false;
+function tocarMusica(){try{var ac=new(window.AudioContext||window.webkitAudioContext)();var BPM=148,beat=60/BPM;var notas=[[261.6,0.75],[261.6,0.25],[293.7,1],[261.6,1],[349.2,1],[329.6,2],[261.6,0.75],[261.6,0.25],[293.7,1],[261.6,1],[392.0,1],[349.2,2],[261.6,0.75],[261.6,0.25],[523.2,1],[440.0,1],[349.2,1],[329.6,1],[293.7,1],[466.2,0.75],[466.2,0.25],[440.0,1],[349.2,1],[392.0,1],[349.2,2]];var t=ac.currentTime+0.08;notas.forEach(function(n){var osc=ac.createOscillator(),g=ac.createGain();osc.connect(g);g.connect(ac.destination);osc.type='triangle';osc.frequency.setValueAtTime(n[0],t);var d=n[1]*beat;g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(0.28,t+0.025);g.gain.setValueAtTime(0.28,t+d*0.72);g.gain.linearRampToValueAtTime(0,t+d*0.95);osc.start(t);osc.stop(t+d);t+=d});}catch(e){}}
+function apagarVelas(){['ef1','efi1','eg1','ef2','efi2','eg2'].forEach(function(id){var el=document.getElementById(id);if(el)el.style.display='none';});[{id:'es1a',a:'smokeUp1 1.5s 0s ease-out forwards'},{id:'es1b',a:'smokeUp2 1.5s 0.2s ease-out forwards'},{id:'es2a',a:'smokeUp1 1.5s 0.1s ease-out forwards'},{id:'es2b',a:'smokeUp2 1.5s 0.3s ease-out forwards'}].forEach(function(s){var el=document.getElementById(s.id);if(!el)return;el.style.display='block';el.style.animation=s.a;});}
+function lancarFogos(){var cores=['#ff4df0','#ffcc00','#ff6600','#00eaff','#ff3366','#66ff99'];for(var i=0;i<22;i++){(function(i){var f=document.createElement('div');f.className='firework';var s=4+Math.random()*5;f.style.cssText='left:'+(Math.random()*93)+'vw;top:'+(Math.random()*58)+'vh;width:'+s+'px;height:'+s+'px;background:'+cores[i%cores.length]+';animation-delay:'+(Math.random()*0.9)+'s;';document.body.appendChild(f);setTimeout(function(){f.remove();},2200);})(i);}}
+function lancarConfetes(){var cores=['#ff4df0','#ffcc00','#ff6600','#00eaff','#ff3366','#66ff99','#fff','#ff99cc'];for(var j=0;j<75;j++){(function(){setTimeout(function(){var c=document.createElement('div');c.className='confetti';var dur=2.2+Math.random()*2.6,w=6+Math.random()*7;c.style.cssText='left:'+(Math.random()*100)+'vw;width:'+w+'px;height:'+w+'px;border-radius:'+(Math.random()>0.5?'50%':'2px')+';background:'+cores[Math.floor(Math.random()*cores.length)]+';animation-duration:'+dur+'s;';document.body.appendChild(c);setTimeout(function(){c.remove();},dur*1000+300);},Math.random()*1400);})();}}
+function festa(){if(jaFestejou)return;jaFestejou=true;tocarMusica();apagarVelas();lancarFogos();lancarConfetes();document.getElementById('kitty').style.animation='dance 0.4s infinite';document.getElementById('msg').style.display='block';document.getElementById('hint').style.display='none';}
+var btn=document.getElementById('cakeBtn');btn.addEventListener('click',festa);btn.addEventListener('touchend',function(e){e.preventDefault();festa();});
+</script>
+</body>
+</html>
